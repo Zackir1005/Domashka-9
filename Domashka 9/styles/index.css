@@ -1,0 +1,203 @@
+* { 
+box-sizing: border-box; 
+padding: 0; 
+margin: 0; 
+transition: .5s ease; 
+/* dobavim plavnost perekhodov dlya vsekh elementov stranitsi */ 
+} 
+a { 
+text-decoration: none; 
+outline: none; 
+} 
+#pic { 
+display: block; 
+width: 200px; 
+box-shadow: 3px 3px 6px blue;
+} 
+h1, h2, h3, h4{ 
+font-family: 'Playfair Display'; 
+font-weight: normal; 
+letter-spacing: 1px;
+font-style: italic;
+} 
+body { 
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 15px; 
+background-color: rgb(210, 210, 255) 
+} 
+/* dobavim ochistku potoka dlya vsekh konteinerov, vnutri kotorikh zadano obtekaniye dochernikh elementov */ 
+header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after { 
+content: '';
+display: table;
+clear: both;
+} 
+/* stilevoy klass kotoriy upravlyaet shirinoy konteinera */ 
+.container { 
+margin: 0 auto; 
+width: 100%; 
+max-width: 1000px; 
+padding: 5px 15px; 
+} 
+header { 
+width: 100%;
+padding: 15px 0; 
+margin-bottom: 30px; 
+position: relative; 
+background-color: rgb(125, 125, 250)
+} 
+/* logotip */ 
+.logo { 
+display: block; 
+font-size: 20px;
+float: left; 
+box-shadow: 1px 1px 1px rgba(10, 20, 30, .5); 
+} 
+/* menyu */ 
+#menu { 
+margin-left: 15px;
+} 
+#menu li { 
+display: inline-block; 
+margin-right: 60px; 
+} 
+#menu a { 
+color: black;
+letter-spacing: 1px; 
+font-weight: 600; 
+font-size: 20px;
+display: block; 
+line-height: 40px; 
+} 
+#menu a:hover { 
+color: ivory; 
+} 
+#menu li:last-child { 
+margin-right: 0; 
+} 
+/* forma poiska */ 
+#searchform {  
+margin-left: 40px; 
+display: inline-block; 
+position: relative; 
+} 
+#searchform input { 
+width: 200px; 
+padding-left: 10px; 
+height: 40px; 
+}
+/* левый контейнер */ 
+.posts-list { 
+margin-bottom: 30px; 
+width: 66%; 
+float: left; 
+} 
+/* блок для статьи */ 
+.post { 
+margin-bottom: 35px; 
+} 
+.post-content p { 
+line-height: 1.5; 
+padding-bottom: 1em; 
+} 
+.post-image { 
+margin-bottom: 30px; 
+} 
+.category { 
+margin-bottom: 15px; 
+} 
+.category a { 
+color: blue; 
+text-transform: uppercase; 
+} 
+.post-title { 
+margin-bottom: 12px; 
+font-size: 28px; 
+}
+/* правый контейнер */ 
+aside { 
+width: 33%; 
+float: right; 
+} 
+/* блок для виджетов */ 
+.widget { 
+padding: 20px 15px; 
+background-color: rgb(125, 125, 250); 
+font-size: 16px; 
+margin-bottom: 20px; 
+} 
+.widget-title { 
+font-size: 20px; 
+padding: 10px; 
+margin-bottom: 20px; 
+text-align: center; 
+border: 1px solid black; 
+box-shadow: 1px 1px 2px 2px black; 
+} 
+.widget-category-list li { 
+border-bottom: 1px solid black; 
+padding: 10px 0; 
+color: black; 
+font-style: italic; 
+}
+.widget-category-list li a { 
+color: black; 
+margin-right: 6px; 
+font-style: normal; 
+} 
+.widget-category-list li a:before { 
+content: ""; 
+display: inline-block; 
+font-family: Arial, Helvetica, sans-serif; 
+margin-right: 10px; 
+color: black; 
+}
+/* форма подписки  */
+#subscribe { 
+position: relative; 
+width: 100%; 
+padding: 15px 0; 
+} 
+#subscribe input { 
+width: 100%; 
+display: block; 
+float: left; 
+border: 1px solid black;
+padding-left: 10px; 
+height: 40px; 
+position: relative; 
+outline: none; 
+font-style: italic; 
+} 
+#subscribe button { 
+padding: 0 15px; 
+background: transparent; 
+height: 40px; 
+border: none; 
+position: absolute; 
+right: 0;
+cursor: pointer; 
+font-size: 18px; 
+} 
+#subscribe input:focus+button { 
+background-color:green; 
+color: white; 
+} 
+footer { 
+padding: 30px 0; 
+background-color:rgb(125, 125, 250); 
+color: white; 
+} 
+.footer-col { 
+width: 30%; 
+float: left; 
+}
+@media (max-width: 750px) { 
+header{
+    height: 120px;
+}
+/* отменяем обтекание левой и правой колонок, устанавливаем им ширину 100%*/ 
+.posts-list, aside { 
+width: 100%; 
+float: none; 
+}
+}
